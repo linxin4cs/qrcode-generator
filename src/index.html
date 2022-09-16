@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta user="sherlinz0" email="sherly_cs_sh@163.com">
+  <title>二维码生成器</title>
+  <link rel="stylesheet" href="./index.css">
+  
+</head>
+<body>
+  <div id="root">
+    <h1>二维码生成器</h1>
+    <div class="hint-container">
+      <p>请输入二维码需要包含的文本</p>
+    </div>
+    <div id="operation-container" >
+      <textarea class="textarea textarea--content" id="textarea--content-code" cols="60" rows="4" placeholder="如果要输入网站，请以http://或https://开头，如http://www.baidu.com" autofocus required></textarea>
+      <button type="button" class="btn btn--confirm" id="btn--confirm-tcc">生成二维码</button>
+    </div>
+    <div id="qrCode"></div>
+  </div>
+</body>
+</html>
