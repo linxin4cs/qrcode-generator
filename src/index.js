@@ -1118,26 +1118,26 @@ function generateQrCode() {
     return;
   }
   
-  if(!document.getElementById("btn--save-qrc")) {
-    const root = document.getElementById("root");
-    const btnSaveQrc = document.createElement("button");
-    const btnSaveQrc_wrapper = document.createElement("a");
-    btnSaveQrc.setAttribute("type", "button");
-    btnSaveQrc.setAttribute("class", "btn btn--save");
-    btnSaveQrc.setAttribute("id", "btn--save-qrc");
-    btnSaveQrc.innerHTML = "保存二维码";
-    btnSaveQrc_wrapper.appendChild(btnSaveQrc);
-    root.appendChild(btnSaveQrc_wrapper);
-  }
+  // if(!document.getElementById("btn--save-qrc")) {
+  //   const root = document.getElementById("root");
+  //   const btnSaveQrc = document.createElement("button");
+  //   const btnSaveQrc_wrapper = document.createElement("a");
+  //   btnSaveQrc.setAttribute("type", "button");
+  //   btnSaveQrc.setAttribute("class", "btn btn--save");
+  //   btnSaveQrc.setAttribute("id", "btn--save-qrc");
+  //   btnSaveQrc.innerHTML = "保存二维码";
+  //   btnSaveQrc_wrapper.appendChild(btnSaveQrc);
+  //   root.appendChild(btnSaveQrc_wrapper);
+  // }
 
   new Promise((resolve, reject) => {
     qrCode.clear();
     qrCode.makeCode(qrcContent);
     resolve();
   }).then(() => {
-    const imgToSave = document.querySelector("#qrCode img");
-    btnSaveQrc_wrapper.download = "二维码";
-    btnSaveQrc_wrapper.href = imgToSave.getAttribute("src");  
+    // const imgToSave = document.querySelector("#qrCode img");
+    // btnSaveQrc_wrapper.download = "二维码";
+    // btnSaveQrc_wrapper.href = imgToSave.getAttribute("src");  
   })
 
   alert("成功生成二维码！");
